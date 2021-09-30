@@ -21,17 +21,22 @@
         </ul>
         <ul class="navigation-list navigation-user">
           <li class="navigation-item">
-            <a class="navigation-link" href="#">
+            <a class="navigation-link navigation-link-search" href="#">
               <span class="visually-hidden"> Поиск </span>
             </a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">
-              <span class="visually-hidden"> Избранное </span>
+              <span class="visually-hidden navigation-link-favorite">
+                Избранное
+              </span>
+              <span class="favorite-hotels-number">12</span>
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link button" href="#">Хочу сюда</a>
+            <a class="navigation-link button button-find-navigation" href="#"
+              >Хочу сюда</a
+            >
           </li>
         </ul>
         <a class="navigation-link" href="#">
@@ -41,15 +46,18 @@
     </header>
     <main class="main-index">
       <section class="intro-index">
+        <h1 class="visually-hidden">
+          Бронирование гостиницы для путешествия в Седону. Аризона.
+        </h1>
         <img
           src="#"
-          alt="Welcom to the gorgeous Sedona. Becouse the Grand Canyon sucks."
+          alt="Welcome to the gorgeous Sedona. Becouse the Grand Canyon sucks."
         />
       </section>
       <section class="advantages">
-        <h1 class="advantages-title">
+        <h2 class="advantages-title">
           Седона — небольшой городок в Аризоне, заслуживающий большего!
-        </h1>
+        </h2>
         <p class="advantages-description">
           Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
         </p>
@@ -125,7 +133,7 @@
           Укажите предполагаемые даты поездки, и мы покажем вам лучшие
           предложения гостиниц в Седоне
         </p>
-        <a href="#" class="button button-find">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
+        <a href="#" class="button button-find">Поиск гостиницы в Седоне</a>
       </section>
       <section class="subscribe">
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
@@ -147,7 +155,7 @@
             type="submit"
             name="subscribe-submit"
           >
-            ПОДПИСАТЬСЯ
+            Подписаться
           </button>
         </form>
       </section>
