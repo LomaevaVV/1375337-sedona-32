@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 23px;
+  color: black;
+  background-color: FFFFFF;
+}
+
+.intro-index {
+  min-height: 485px;
+  background-image: url("../img/index/welcom_section/index-background.jpg");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
+
+.subscribe-index {
+  min-height: 411px;
+  background-image: url("../img/index/subscribe_index_background.jpg");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
+
+.catalog-hotels {
+  background-image: url("../img/catalog/catalog-background.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.advantage-blue {
+  background: #83b3d3;
+}
+
+.advantage-grey {
+  background: rgba(131, 179, 211, 0.12);
+}
+
+.advantage-dark-grey {
+  background: rgba(131, 179, 211, 0.2);
+}

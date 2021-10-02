@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
 
   <body>
@@ -39,8 +40,14 @@
             >
           </li>
         </ul>
-        <a class="navigation-link" href="#">
-          <img class="logo" src="#" alt="Логотип города Седона" />
+        <a class="navigation-link" href="index.html">
+          <img
+            class="logo"
+            src="img/index/header/sedona_logo.svg"
+            width="138"
+            height="70"
+            alt="Логотип города Седона"
+          />
         </a>
       </nav>
     </header>
@@ -150,39 +157,38 @@
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Стоимость, ₽:</legend>
 
+            <input
+              id="catalog-filter-input-min-price"
+              type="number"
+              name="min-price"
+              value="0"
+            />
+            <label
+              class="catalog-filter-input"
+              for="catalog-filter-input-min-price"
+              >от
+            </label>
+            <input
+              id="catalog-filter-input-max-price"
+              class="catalog-filter-input"
+              type="number"
+              name="max-price"
+              value="9000"
+            />
+            <label
+              class="catalog-filter-input"
+              for="catalog-filter-input-max-price"
+              >до</label
+            >
+
             <div class="catalog-filter-range-wrapper">
-              <input
-                id="catalog-filter-input-min-price"
-                type="number"
-                name="min-price"
-                value="0"
-              />
-              <label
-                class="catalog-filter-input"
-                for="catalog-filter-input-min-price"
-                >от
-              </label>
-              <input
-                id="catalog-filter-input-max-price"
-                class="catalog-filter-input"
-                type="number"
-                name="max-price"
-                value="9000"
-              />
-              <label
-                class="catalog-filter-input"
-                for="catalog-filter-input-max-price"
-                >до</label
-              >
-            </div>
-            <p>
               <button class="range-toggle toggle-min" type="button">
                 <span class="visually-hidden">Изменить минимальную цену.</span>
               </button>
               <button class="range-toggle toggle-max" type="button">
                 <span class="visually-hidden">Изменить максимальную цену.</span>
               </button>
-            </p>
+            </div>
           </fieldset>
 
           <button class="button" type="reset">Применить</button>
@@ -198,16 +204,22 @@
             <option value="cheap">Сначала дешевые</option>
             <option value="popular">Сначала высокий рейтинг</option>
             <option value="expensive">Сначала дорогие</option>
-          </select>          
+          </select>
         </form>
-        <button class="button button-cards" type="button">Показать карточки</button>
+        <button class="button button-cards" type="button">
+          Показать карточки
+        </button>
         <button class="button button-slideshow" type="button">Слайдшоу</button>
-        <button class="button button-list current-button" type="button">Показать список</button>
-        
+        <button class="button button-list current-button" type="button">
+          Показать список
+        </button>
+
         <div class="hotel-card">
           <img
             class="hotel-card-image"
-            src="#"
+            src="img/catalog/hotels/hotel_Amara_Resort_Spa.jpg"
+            width="180"
+            height="120"
             alt="Гостиница Amara Resort & Spa, расположенная на горе"
           />
           <a class="hotel-card-link" href="hotel.html">
@@ -224,7 +236,9 @@
         <div class="hotel-card">
           <img
             class="hotel-card-image"
-            src="#"
+            src="img/catalog/hotels/motel_Desert_Quail_Inn.jpg"
+            width="180"
+            height="120"
             alt="Мотель Desert Quail Inn на фоне окружающего ландшафта"
           />
           <a class="hotel-card-link" href="hotel.html">
@@ -239,7 +253,9 @@
         <div class="hotel-card">
           <img
             class="hotel-card-image"
-            src="#"
+            src="img/catalog/hotels/apartaments_Villas_at_Poco_Diablo.jpg"
+            width="180"
+            height="120"
             alt="Горы вблизи апартаментов Villas at Poco Diablo"
           />
           <a class="hotel-card-link" href="hotel.html">
@@ -258,7 +274,9 @@
         <div class="hotel-card">
           <img
             class="hotel-card-image"
-            src="#"
+            src="img/catalog/hotels/hotel_GreenTree_Inn.jpg"
+            width="180"
+            height="120"
             alt="Лесная холмистая местность с рекой вблизи гостиницы GreenTree Inn"
           />
           <a class="hotel-card-link" href="hotel.html">
