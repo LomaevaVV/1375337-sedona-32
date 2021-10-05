@@ -191,8 +191,8 @@
             </div>
           </fieldset>
 
-          <button class="button" type="reset">Применить</button>
-          <input name="example" type="reset" value="Сбросить" />
+          <button class="button catalog-filter-button" type="reset">Применить</button>
+          <input class="catalog-filter-reset" name="example" type="reset" value="Сбросить" />
         </form>
       </section>
 
@@ -201,16 +201,16 @@
         <form class="sorting-type" action="https://echo.htmlacademy.ru/">
           <label class="visually-hidden" for="sorting">Сортировка</label>
           <select class="select-control" id="sorting" name="sorting">
-            <option value="cheap">Сначала дешевые</option>
-            <option value="popular">Сначала высокий рейтинг</option>
-            <option value="expensive">Сначала дорогие</option>
+            <option class="select-control" value="cheap">Сначала дешевые</option>
+            <option class="select-control" value="popular">Сначала высокий рейтинг</option>
+            <option class="select-control" value="expensive">Сначала дорогие</option>
           </select>
         </form>
-        <button class="button button-cards" type="button">
+        <button class="button-view button-cards" type="button">
           Показать карточки
         </button>
-        <button class="button button-slideshow" type="button">Слайдшоу</button>
-        <button class="button button-list current-button" type="button">
+        <button class="button-view button-slideshow" type="button">Слайдшоу</button>
+        <button class="button-view button-list current-button" type="button">
           Показать список
         </button>
 
@@ -226,9 +226,9 @@
             <h3 class="hotel-card-title hotel-stars">Amara Resort & Spa</h3>
           </a>
           <p>Гостиница</p>
-          <b class="hotel-card-price">От 4000 ₽</b>
-          <a href="#" class="hotel-card-button button">Подробнее</a>
-          <button class="hotel-to-favorite" type="button">В избранное</button>
+          <p>От 4000 ₽</p>
+          <a href="#" class="button hotel-card-button">Подробнее</a>
+          <button class="button hotel-to-favorite" type="button">В избранное</button>
 
           <p class="rating">Рейтинг: 8,5</p>
         </div>
@@ -245,8 +245,8 @@
             <h3 class="hotel-card-title hotel-stars">Desert Quail Inn</h3>
           </a>
           <p>Мотель</p>
-          <b class="hotel-card-price">От 3000 ₽</b>
-          <a href="#" class="hotel-card-button button">Подробнее</a>
+          <p>От 3000 ₽</p>
+          <a href="#" class="button hotel-card-button">Подробнее</a>
           <p class="rating">Рейтинг: 8,9</p>
         </div>
 
@@ -262,15 +262,11 @@
             <h3 class="hotel-card-title hotel-stars">Villas at Poco Diablo</h3>
           </a>
           <p>Апартаменты</p>
-          <b class="hotel-card-price">От 2000 ₽</b>
-          <a href="#" class="hotel-card-button button">Подробнее</a>
-          <label class="hotel-in-favorite visually-hidden">
-            <input type="submit" value="В избранном" />
-            В избранном
-          </label>
+          <p>От 2000 ₽</p>
+          <a href="#" class="button hotel-card-button">Подробнее</a>
+          <button class="button hotel-in-favorite" type="button">В избранном</button>
           <p class="rating">Рейтинг: 9,2</p>
         </div>
-
         <div class="hotel-card">
           <img
             class="hotel-card-image"
@@ -283,16 +279,13 @@
             <h3 class="hotel-card-title hotel-stars">GreenTree Inn</h3>
           </a>
           <p>Гостиница</p>
-          <b class="hotel-card-price">От 3000 ₽</b>
-          <a href="#" class="hotel-card-button button">Подробнее</a>
-          <label class="hotel-to-favorite visually-hidden">
-            <input type="submit" value="В избранное" />
-            В избранное
-          </label>
+          <p>От 3000 ₽</p>
+          <a href="#" class="button hotel-card-button">Подробнее</a>
+          <button class="button hotel-to-favorite" type="button">В избранное</button>
           <p class="rating">Рейтинг: 9,2</p>
         </div>
 
-        <button class="button pagination-show-more" type="button">
+        <button class="pagination-more pagination-link" type="button">
           Загрузить еще
         </button>
         <ul class="pagination">
@@ -330,7 +323,7 @@
         </form>
       </section>
 
-      <section class="subscribe subscribe-catalog">
+      <section class="subscribe">
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
         <p class="subscribe-description">
           Только полезная информация и никакого спама, честное бойскаутское!
@@ -390,7 +383,13 @@
       </p>
       <p>
         <a class="htmlacademy-link" href="https://htmlacademy.ru/"
-          >.html academy</a
+          ><img
+          class="footer-logo"
+          src="img/index/footer/footer_logo.svg"
+          width="115"
+          height="34"
+          alt="Логотип HTML Academy"
+        /></a
         >
       </p>
     </footer>
