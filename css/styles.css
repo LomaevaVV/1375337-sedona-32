@@ -9,7 +9,7 @@
   --advantage-background-dark-grey: rgba(131, 179, 211, 0.2);
   --find-hotel-button-color: #756257;
   --favorite-hotels-button-color: #7db54f;
-  --rating-background : #F2F2F2;
+  --rating-background: #f2f2f2;
 }
 
 @font-face {
@@ -28,7 +28,16 @@
   font-display: swap;
 }
 
+/*Sticky-footer -> height of page*/
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0; 
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -47,6 +56,20 @@ body {
 }
 */
 
+/*stretch "Main" to full screen*/
+.main-container {
+  flex-grow: 1; 
+  padding: 0;
+}
+
+/* specify the page_width */
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+  
+}
+
+
 /*Index_welcome_section*/
 .intro-index {
   color: var(--primary-background-color);
@@ -56,6 +79,28 @@ body {
   background-size: 100% auto;
   background-repeat: no-repeat;
   text-align: center;
+}
+
+/*Header-navigation*/
+.navigation {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  width: 531px;
+  list-style-type: none;
+
+}
+
+.navigation-user {
+  max-width: 280px;
+  margin-left: auto;
+  list-style-type: none;
+ 
 }
 
 .navigation-link {
@@ -91,6 +136,29 @@ body {
 }
 
 /*Index_advantages*/
+/* Advantages-list */
+.advantages-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.advantages-item {
+  width: 400px;
+  height: 384px;
+  text-align: center;   
+}
+
+/* Флекс-контейнер для построения плитки преимуществ */
+.advantage-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  margin: 0;
+  padding: 0;
+}
+
 .advantages {
   text-align: center;
 }
@@ -157,7 +225,7 @@ body {
 
 /*Subscribe_section*/
 .subscribe {
-  text-align: center;
+  text-align: center; 
 }
 
 .subscribe-title {
@@ -191,13 +259,38 @@ body {
 }
 
 /*Footer*/
+.page-footer-container {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.footer-social {
+  list-style-type: none;
+  width: 120px;
+  margin-left: 72px;
+  margin-right: 48px;  
+}
+
+.social-button {  
+  color: inherit;
+  text-decoration: none;
+}
+
 .footer-contacts-phone {
+  width: 720px;
   font-size: 40px;
   line-height: 40px;
   text-align: center;
   text-transform: uppercase;
   color: inherit;
   text-decoration: none;
+}
+
+.htmlacademy-link {
+  margin-left: 53px;
+  margin-right: auto;  
 }
 
 /*Catalog*/
