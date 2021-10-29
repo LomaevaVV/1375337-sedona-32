@@ -76,7 +76,6 @@
             </ul>
           </div>
 
-          <h2 class="visually-hidden">Поиск гостиницы по параметрам</h2>
           <form
             class="catalog-filter catalog-filter-wrapper"
             action="https://echo.htmlacademy.ru/"
@@ -201,17 +200,15 @@
               </div>
             </fieldset>
 
-            <fieldset class="catalog-filter-group filter-buttons">
-              <legend class="visually-hidden">
-                Кнопки применения/сброса фильтров
-              </legend>
+            <!-- Кнопки применения/сброса фильтров -->
+            <div class="catalog-filter-group filter-buttons">             
               <button class="button catalog-filter-button" type="submit">
                 Применить
               </button>
               <button class="catalog-filter-reset" name="example" type="reset">
                 Сбросить
               </button>
-            </fieldset>
+            </div>            
           </form>
         </div>
       </section>
@@ -329,31 +326,33 @@
               <p class="rating">Рейтинг: 9,2</p>
             </div>
             <!-- Кнопка "Загрузить еще" -->
-            <button class="pagination-more pagination-link" type="button">
-              Загрузить еще
-            </button>
+            <div class="pagination-more">
+              <button class="pagination-more-button pagination-link" type="button">
+                Загрузить еще
+              </button>
+            </div>
           </div>
 
           <!-- Нижняя панель отображения результатов поиска -->
           <div class="lower-panel-search-result">
             <ul class="pagination">
               <li class="pagination-item pagination-current">
-                <a class="pagination-link pagination-current">1</a>
+                <a class="pagination-link pagination-number pagination-current">1</a>
               </li>
               <li class="pagination-item">
-                <a class="pagination-link" href="#">2</a>
+                <a class="pagination-link pagination-number" href="#">2</a>
               </li>
               <li class="pagination-item">
-                <a class="pagination-link" href="#">3</a>
+                <a class="pagination-link pagination-number" href="#">3</a>
               </li>
               <li class="pagination-item">
-                <a class="pagination-link" href="#">4</a>
+                <a class="pagination-link pagination-number" href="#">4</a>
               </li>
               <li class="pagination-item pagination-dots">
-                <a class="pagination-link" href="#"></a>
+                <a class="pagination-link pagination-number" href="#"></a>
               </li>
               <li class="pagination-item">
-                <a class="pagination-link" href="#">10</a>
+                <a class="pagination-link pagination-number" href="#">10</a>
               </li>
             </ul>
             <!-- Выбор количества карточек отображения -->

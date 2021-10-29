@@ -110,6 +110,7 @@ body {
 .navigation-item {
   align-self: center; 
   justify-self: center;
+  padding: 19px 0;
 }
 
 .navigation-user-list {
@@ -125,6 +126,7 @@ body {
 
 /*header-button*/
 .button-find-navigation {
+  display: inline-block;
   background-color: var(--find-hotel-button-color);
   padding-top: 9px;
   padding-bottom: 10px; 
@@ -137,7 +139,7 @@ body {
   font-size: 20px;
   line-height: 26px;
   color: inherit;
-  text-decoration: none;
+  text-decoration: none;  
 }
 
 .logo {
@@ -146,6 +148,7 @@ body {
 
 /*All small buttons*/
 .button {
+  display: inline-block;
   font-weight: bold;
   font-size: 16px;
   line-height: 21px;
@@ -245,6 +248,7 @@ body {
   text-align: center;
   margin: 0 auto;
   padding: 0 75px;
+  padding-bottom: 25px;
 }
 
 .advantage-number {
@@ -263,8 +267,7 @@ body {
 /*Index-Find-hotel-section*/
 .find-hotel {
   text-align: center;
-  padding-top: 91px;
-  margin-bottom: 91px;
+  padding: 91px 0;  
 }
 
 .find-hotel-title {
@@ -335,10 +338,12 @@ body {
 .subscribe-email {
   width: 600px;
   height: 60px;
-  padding: 0;
+  padding: 0 22px;  
   border: none;
   margin: 0;
   box-sizing: border-box;
+  font-size: 18px;
+  line-height: 26px;
 }
 
 .subscribe-email-catalog {
@@ -346,6 +351,7 @@ body {
 }
 
 .subscribe-button {  
+  display: inline-block;
   font-size: 20px;
   line-height: 26px;
   color: var(--primary-background-color);
@@ -391,6 +397,7 @@ body {
 }
 
 .social-button {
+  display: inline-block;
   color: inherit;
   text-decoration: none;
 }
@@ -480,7 +487,9 @@ body {
 }
 
 /*Catalog-Button-apply-filters*/
-.catalog-filter-button {  
+.catalog-filter-button { 
+  display: inline-block; 
+  max-width: 160px;
   background-color: var(--secondary-background-color);
   border: none;
   padding-top: 9px;
@@ -519,6 +528,10 @@ body {
   margin-right: 0;
 }
 
+.catalog-filter-item:last-child {
+  margin-bottom: 0;
+}
+
 .filter-infrastructure {
   width: 150px;
   margin-right: 67px;
@@ -538,6 +551,7 @@ body {
 }
 
 .filter-buttons {
+  display: inline-block;
   width: 160px;
   padding-top: 60px;
   padding-left: 0;
@@ -603,8 +617,8 @@ body {
   display: grid;
   grid-template-columns: 217px 159px 521px 1fr;
   grid-template-rows: minmax(31px, auto) minmax(54px, auto) 1fr;
-  margin-top: 28px;
-  margin-bottom: 58px;
+  padding-top: 28px;
+  padding-bottom: 30px;
   color: var(--secondary-font-color);
 }
 
@@ -647,6 +661,7 @@ body {
 
 /*Catalog-Button-on-hotel-card-more-information*/
 .hotel-card-button {
+  display: inline-block;
   padding-left: 27px;
   padding-right: 27px;
   padding-top: 8px;
@@ -658,7 +673,8 @@ body {
 }
 
 /*Catalog-Button-on-hotel-card-to-favorite*/
-.hotel-to-favorite {  
+.hotel-to-favorite {
+  display: inline-block;  
   padding-left: 27px;
   padding-right: 27px;
   padding-top: 8px;
@@ -671,6 +687,7 @@ body {
 
 /*Catalog-Button-on-hotel-card-in-favorite*/
 .hotel-in-favorite {
+  display: inline-block;
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 8px;
@@ -700,31 +717,34 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 31px;
 }
 
 .pagination {
-  max-width: 670px;
+  max-width: 650px;
   display: grid;
-  grid-auto-flow: column;
-  gap: 7px;
+  grid-template-columns: repeat(auto-fill, minmax(56px,1fr));
+  grid-gap: 7px;
   margin: 0;
   padding: 0;
 }
 
 .pagination-item {
-  display: grid;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   min-width: 55px;
   min-height: 55px;
+  max-width: 100px;
   padding: 10px;
   box-sizing: border-box;
   list-style: none;
-  background-color: var(--secondary-background-color);
+  background-color: var(--secondary-background-color);  
 }
 
 .pagination-link {
-  display: block;
-  margin: auto;
+  display: block;  
   font-weight: bold;
   font-size: 20px;
   line-height: 26px;
@@ -735,12 +755,27 @@ body {
   text-align: center;
 }
 
+.pagination-number {  
+  margin: 0;  
+  max-width: 56px;
+  overflow-wrap: break-word;
+}
+
 .pagination-more {
+  padding-top: 31px;
+  padding-bottom: 30px;
+  padding-left: 210px;
+  padding-right: 210px;
+}
+
+.pagination-more-button {
+  display: inline-block; 
   background-color: var(--secondary-background-color);
   padding-left: 233px;
   padding-right: 233px;
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 15px;  
+  margin: 0;
 }
 
 .pagination-current {
