@@ -37,7 +37,7 @@
           </a>
           <!-- Пользовательская навигация -->
           <ul class="navigation-user-list">
-            <li class="navigation-item">
+            <li class="navigation-item navigation-item-seach">
               <a class="navigation-link navigation-user-link" href="#">
                 <svg
                   class="navigation-icon"
@@ -58,7 +58,7 @@
                 <span class="visually-hidden"> Поиск </span>
               </a>
             </li>
-            <li class="navigation-item">
+            <li class="navigation-item navigation-item-favorite">
               <a class="navigation-link navigation-user-link" href="#">
                 <svg
                   class="navigation-icon"
@@ -79,7 +79,8 @@
                 <span class="visually-hidden"> Избранное </span>
                 <span class="favorite-hotels-number">12</span>
               </a>
-              <div class="popover popover-favorite popover-open">
+              <!-- Поповер-Избранное -->
+              <div class="popover popover-favorite popover-close">
                 <div class="popover-content">
                   <h2 class="visually-hidden popover-title">
                     Отели в избранном
@@ -98,7 +99,7 @@
                         <p class="hotel-card-accommodation-type-preview">Мотель</p>
                       </a>  
                       <div class="popover-button-delete">                       
-                        <a class="3 button-delete" href="#">
+                        <a class="button-delete" href="#">
                           <span class="visually-hidden"> Удалить </span>
                         </a>
                       </div>
@@ -406,5 +407,73 @@
         </div>
       </div>
     </footer>
+    <div class="modal-container modal-close">
+      <div class="modal modal-hotel-find">
+        <button class="modal-close-button modal-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="booking-form" action="https://echo.htmlacademy.ru/" method="post">
+            <p class="field-group booking-check-in">
+              <label for="booking-check-in">Дата заезда:</label>              
+              <input class="booking-check-input" type="text" id="booking-check-in" name="booking-check-in" placeholder="Укажите дату">
+              <span class="notice notice-invalid notice-close">Мы не можем отправить вас в прошлое.</span>
+              <button class="modal-calendar-button modal-button">
+                <span class="visually-hidden">Календарь</span>
+              </button>
+            </p>
+            <p class="field-group booking-check-out">
+              <label for="booking-check-out">Дата выезда:</label>
+              <input class="booking-check-input" type="text" id="booking-check-out" name="booking-check-out" placeholder="Укажите дату">
+              <span class="notice notice-valid notice-close">На эти даты есть свободные номера. Пока есть.</span>
+              <button class="modal-calendar-button modal-button">
+                <span class="visually-hidden">Календарь</span>
+              </button>
+            </p>
+            <div class="booking-guests">
+              <p class="field-group booking-adults">              
+                <label for="booking-adults">Взрослые:</label> 
+                <button class="modal-minus-button modal-button">
+                  <span class="visually-hidden">Уменьшить количество взрослых</span>
+                </button>
+                <input class="booking-guests-input" type="number" id="booking-adults" name="booking-adults" value="2">
+                <button class="modal-plus-button modal-button">
+                  <span class="visually-hidden">Увеличить количество взрослых</span>
+                </button>
+              </p>
+              <p class="field-group booking-children">
+                  <label for="booking-children">Дети:</label> 
+                  <button class="booking-info" type="button">
+                    <span class="visually-hidden">Посмотреть дополнительную информацию</span> 
+                    <div class="tooltip tooltip-info tooltip-close">
+                      <div class="tooltip-content">
+                        <h3 class="visually-hidden">Информационная подсказка</h2>
+                        <p>
+                        Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                        </p> 
+                      </div>
+                    </div>
+                  </button>
+                  <button class="modal-minus-button modal-button">
+                    <span class="visually-hidden">Уменьшить количество детей</span>
+                  </button>
+                  <input class="booking-guests-input" type="number" id="booking-children" name="booking-children" value="1">
+                  <button class="modal-plus-button modal-button">
+                    <span class="visually-hidden">Увеличить количество взрослых</span>
+                  </button>
+                </p>
+            </div>
+            <button class="button button-blue booking-search" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
+    </div>
   </body>
 </html>
+
+
+
+
+
+

@@ -242,11 +242,11 @@ body {
   padding-bottom: 6px;
 }
 
-.navigation-user-list li:first-child {
+.navigation-item-seach {
   margin-right: 3px;
 }
 
-.navigation-user-list li:nth-child(2) {
+.navigation-item-favorite {
   margin-right: 9px;
 }
 
@@ -510,7 +510,8 @@ body {
 /*Index-Find-hotel-section*/
 .find-hotel {
   text-align: center;
-  padding: 91px 0;
+  padding: 88px 0;
+  padding-bottom: 90px;
 }
 
 .find-hotel-title {
@@ -797,8 +798,8 @@ body {
   box-sizing: border-box;
   border: 3px solid transparent;
   border-radius: 10px;
-  padding-left: 19.5px;
-  padding-right: 19.5px;
+  padding-left: 19px;
+  padding-right: 19px;
   padding-top: 25px;
   padding-bottom: 19px;
 }
@@ -1028,9 +1029,10 @@ body {
 
 .catalog-filter-item {
   padding-left: 2px;
-  margin-bottom: 13.5px;
+  margin-bottom: 13px;
   margin-right: 0;
 }
+
 .catalog-filter-item:last-child {
   margin-bottom: 0;
 }
@@ -1075,8 +1077,8 @@ body {
 }
 
 .control-input:focus-visible + .control-mark {  
-  outline: 3px solid #83B3D3;
-  background: rgba(255, 255, 255, 0.6);
+  outline: 3px solid var(--secondary-background-color);
+  background: rgba(255, 255, 255, 0.6);  
 }
 
 .control-input:disabled + .control-mark {
@@ -1103,7 +1105,7 @@ body {
 .control-input[type="radio"]:checked + .control-mark::before {
   position: absolute;
   top: 5px;
-  left: 5.25px;
+  left: 5px;
   width: 10px;
   height: 10px;
   background-color: var(--control-radio-check);
@@ -1154,7 +1156,8 @@ body {
 }
 
 .catalog-filter-input:focus-visible {
-  box-shadow: 0px 0px 0px 3px var(--input-price-focus);
+  box-shadow: 0px 0px 0px 3px var(--input-price-focus), 
+              inset   0px 0px 0px 3px var(--input-price-focus);
 }
 
 .catalog-filter-input:active { 
@@ -1277,9 +1280,13 @@ body {
   background-color: inherit;
   box-sizing: border-box;
   border-radius: 4px;
-  -webkit-appearance: none;
+  -webkit-appearance: none;  
   -moz-appearance: none;
   appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance:textfield;
 }
 
 .select-control-sorting {
@@ -1435,13 +1442,17 @@ body {
   margin: 0;  
 }
 
+.hotel-stars {
+  grid-column: 4/5;
+  grid-row: 1/2;
+}
+
+
 .hotel-stars.two-stars {
   background-image: url(..//img/catalog/hotels_stars.svg),
                     url(..//img/catalog/hotels_stars.svg);
   background-repeat: no-repeat, no-repeat;
-  background-position: 60px, 85px;
-  grid-column: 4/5;
-  grid-row: 1/2;
+  background-position: 60px, 85px;  
 }
 
 .hotel-stars.three-stars {
@@ -1450,8 +1461,6 @@ body {
                     url(..//img/catalog/hotels_stars.svg);
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: 45px, 70px, 95px;
-  grid-column: 4/5;
-  grid-row: 1/2;
 }
 
 .hotel-stars.four-stars {
@@ -1461,8 +1470,6 @@ body {
                     url(..//img/catalog/hotels_stars.svg);
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   background-position: 35px, 60px, 85px, 108px;
-  grid-column: 4/5;
-  grid-row: 1/2;
 }
 
 .hotel-card-accommodation-type {
@@ -1497,31 +1504,30 @@ body {
 }
 
 /*Catalog-Button-on-hotel-card-to-favorite*/
-.hotel-to-favorite {
+.hotel-favorite-button {
   font-family: inherit;
   display: inline-block;
+  grid-column: 3/4;
+  grid-row: 3/4;
+  margin-right: 360px;
+}
+
+
+.hotel-to-favorite {  
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 6px;
-  padding-bottom: 5px;
-  margin-right: 360px;
-  background-color: var(--secondary-background-color);
-  grid-column: 3/4;
-  grid-row: 3/4;
+  padding-bottom: 5px;  
+  background-color: var(--secondary-background-color);  
 }
 
 /*Catalog-Button-on-hotel-card-in-favorite*/
 .hotel-in-favorite {
-  font-family: inherit;
-  display: inline-block;
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 8px;
   padding-bottom: 8px;
-  margin-right: 360px;
   background-color: var(--favorite-hotels-button-color);
-  grid-column: 3/4;
-  grid-row: 3/4;
 }
 
 .hotel-in-favorite:hover {
@@ -1655,8 +1661,8 @@ body {
 /* Popover */
 .popover {
   position: absolute;
-  top: 50px;
-  left: -187px;
+  top: 49px;
+  left: -180px;
   z-index: 1;
   box-sizing: border-box; 
   padding: 0; 
@@ -1664,15 +1670,14 @@ body {
   font-family: "PT Sans", Arial, sans-serif;
   color: var(--primary-font-color);
   background-color: var(--primary-background-color);
-  min-height: 120px;
-  box-sizing: border-box;
+  min-height: 120px;  
   box-shadow: 0px 25px 50px var(--popover-shadow);
   border-radius: 20px;
-  display: none;
+  display: block;
 }
 
-.popover-open {
-  display: block;
+.popover-close {
+  display: none;
 }
 
 .popover-content {
@@ -1684,9 +1689,8 @@ body {
   content: "";
   width: 20px;
   height: 9px;
-  position: absolute;
   top: -8px;
-  right: 184px;
+  right: 193px;
   background-repeat: no-repeat;
   background-image: url("..//img/popover/popover_triangle.svg");
 }
@@ -1694,24 +1698,29 @@ body {
 .favorite-hotels-preview {
   display: flex;
   flex-direction: column;  
-  padding-top: 15px;
+  padding-top: 13px;
   border: 1px solid var(--view-button-background);
   border-radius: 20px 20px 0 0;
   border-bottom: none;
+  margin-bottom: 17px;
 }
 
 .hotel-card-preview {  
   display: flex;
   flex-direction: row;
-  padding: 0 15px;
+  padding: 0 14px;
   padding-bottom: 0;
-  margin-bottom: 5px;  
+  margin: 0;
+}
+
+.hotel-card-preview:not(:last-child) {
+  margin-bottom: 5px;
 }
 
 .hotel-card-link-preview {  
   display: grid;
   grid-template-columns: 65px 1fr;
-  grid-template-rows: minmax(21px, auto) minmax(21px, auto);    
+  grid-template-rows: minmax(19px, auto) minmax(19px, auto);    
   align-items: center;    
   color: var(--primery-color);
   text-decoration: none; 
@@ -1744,7 +1753,7 @@ body {
   margin: 0;
   font-weight: bold;
   font-size: 18px;
-  line-height: 21px;
+  line-height: 20px;
   grid-column: 2/3;
   grid-row: 1/2;  
   overflow-wrap: break-word;   
@@ -1752,7 +1761,8 @@ body {
 
 .hotel-card-accommodation-type-preview {
   font-size: 16px;
-  line-height: 21px;
+  line-height: 20px;
+  align-self: start;
   grid-column: 2/3;
   grid-row: 2/3;
   margin: 0;
@@ -1768,7 +1778,7 @@ body {
 .button-delete {
   width: 36px;
   height: 36px;
-  background-image: url("..//img/popover/Delete-hotel-from-favorite.svg");
+  background-image: url("..//img/popover/delete_hotel_from_favorite.svg");
   background-repeat: no-repeat;
   background-size: 16px 16px;
   background-position: center;    
@@ -1800,7 +1810,8 @@ body {
   justify-content: center;
   width: 400px;
   max-height: 60px;
-  padding: 20px 20px;
+  padding: 18px 20px;
+  padding-bottom: 21px;
   box-sizing: border-box;
   font-weight: bold;
   font-size: 16px;
@@ -1808,4 +1819,326 @@ body {
   background: var(--find-hotel-button-color);
   border-radius: 0px 0px 20px 20px;
   margin: 0;
+}
+
+/* Modal-window */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: rgba(242, 242, 242, 0.8);
+}
+
+.modal-close {
+  display: none;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 62px;
+  padding-left: 66px;
+  padding-bottom: 70px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+  border: none;
+  box-sizing: border-box;  
+}
+
+.modal-hotel-find {
+  width: 715px;  
+}
+
+.modal-content {
+  max-width: 575px;
+  margin: 0;
+}
+
+.modal-button {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;  
+  border: none;
+  width: 25px;
+  height: 25px;  
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: unset;
+}
+
+.modal-close-button {  
+  padding: 20px;
+  top: 60px;
+  right: 76px;
+  width: 13px;
+  height: 13px;
+  background-color: var(--backing-background); 
+  border-radius: 50%;
+  background-image: url("..//img/modal/modal_close_button.svg"); 
+} 
+
+.modal-close-button:hover {
+  background-color: var(--view-button-background);
+}
+
+.modal-close-button:focus-visible {
+  background-color: var(--view-button-background);
+  outline: 3px solid var(--secondary-background-color);
+}
+
+.modal-close-button:active {
+  background-color: var(--view-button-background);
+  opacity: 0.3;
+}
+
+.modal-title {
+  display: inline-block;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 40px;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 60px;
+}
+
+.field-group {
+  position: relative;  
+}
+
+.field-group input {
+  max-width: 420px;
+  box-sizing: border-box;
+  background: var(--backing-background);
+  border-radius: 4px;
+  border: none;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+  color: var(--primary-font-color);
+  padding-left: 19px;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-check-in, 
+.booking-check-out {
+  max-width: 575px;
+  display: grid;
+  grid-template-columns: 155px 420px;  
+  grid-template-rows: minmax(50px,1fr);
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+
+.booking-check-out {
+  margin-bottom: 45px;
+}
+
+.booking-check-in label, 
+.booking-check-out label {
+  padding-left: 5px;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.booking-check-input {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.booking-check-input:hover {
+  background-color: var(--view-button-background);
+}
+
+.booking-check-input:focus-visible {
+  background-color: var(--view-button-background);
+  outline: 3px solid var(--secondary-background-color);
+}
+
+.booking-check-input:not(:placeholder-shown) {
+  background-color: var(--primary-background-color);
+  outline: 2px solid var(--primary-font-color);
+}
+
+.notice {
+  position: absolute;
+  display: flex;
+  min-width: 420px;
+  grid-column: 2/3;
+  grid-row: 2/2;
+  font-size: 16px;
+  line-height: 27px;  
+  margin: 0;
+  padding-left: 5px;
+}
+
+.notice-close {
+  display: none;
+} 
+
+.notice-invalid {
+  color: var(--subscribe-email-invalid);
+}
+
+.booking-guests,
+.booking-guests .field-group {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  margin-bottom: 23px;
+}
+
+.field-group label {
+  display: flex;
+  width: 155px;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 40px;
+  margin: 0;
+  align-items: center;
+  word-wrap: break-word;
+  padding-left: 5px;
+}
+
+.booking-children label {
+  width: 54px;
+  margin-right: 43px;
+}
+
+.booking-guests .booking-adults {
+  margin-right: 49px;
+}
+
+input.booking-guests-input {
+  max-width: 133px;  
+  text-align: center;
+  padding-left: 5px;
+}
+
+.booking-guests-input::-webkit-inner-spin-button,
+.booking-guests-input::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+
+.modal-minus-button {  
+  background-image: url(..//img/modal/modal_minus.svg);
+  right: 96px;
+  top: 8px;  
+  opacity: 0.3;
+}
+
+.modal-plus-button {  
+  background-image: url(..//img/modal/modal_plus.svg);
+  right: 14px;
+  top: 8px; 
+  opacity: 0.3;
+}
+
+.modal-minus-button:hover,
+.modal-plus-button:hover {
+  opacity: 1;
+}
+
+.modal-minus-button:focus-visible,
+.modal-plus-button:focus-visible {
+  opacity: 1;
+  outline: 3px solid var(--secondary-background-color);
+}
+
+.modal-minus-button:active,
+.modal-plus-button:active {
+  opacity: 0.2;
+}
+
+.modal-calendar-button {
+  background-image: url(..//img/modal/modal_icon_calendar.svg);  
+  right: 14px;
+  top: 12px;
+  background-color: transparent;
+}
+
+.booking-search {
+  width: 575px;
+  height: 60px;
+  background: var(--secondary-background-color);
+  border-radius: 10px;
+  border: none;
+}
+
+button.booking-info {
+  position: absolute;
+  left: 60px;
+  top: 10px;
+  width: 25px;
+  height: 25px;
+  background: var(--secondary-background-color);
+  border-radius: 50%;
+  border: none;
+  background-image: url(..//img/modal/modal_info.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.button.booking-info:hover {
+  background-color: var(--social-icon-hover);
+}
+
+/* Tooltip */
+.tooltip {  
+  position: absolute;
+  z-index: 1;
+  box-sizing: border-box; 
+  padding: 0; 
+  width: 256px;
+  min-height: 83px;   
+  background-color: #333333;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  padding-left: 22px;
+  padding-right: 18px;
+  padding-bottom: 8px;  
+  top: 38px;
+  right: -115px;
+}
+
+.tooltip-close {
+  display: none;
+}
+
+.tooltip-content {
+  font-family: "PT Sans", Arial, sans-serif;
+  height: 100%;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: start;
+  color: #FFFFFF; 
+}
+
+.tooltip::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 9px;
+  top: -9px;
+  right: 118px;
+  background-repeat: no-repeat;
+  background-image: url("..//img/modal/modal_triangle.svg");
 }
