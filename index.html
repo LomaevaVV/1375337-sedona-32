@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />    
+    <link rel="icon" href="favicon.ico" sizes="any"><!-- 32×32 -->    
   </head>
 
   <body>
@@ -15,8 +16,7 @@
           <ul class="navigation-list">
             <li class="navigation-item">
               <a class="navigation-link navigation-link-current" href="#"
-                >Главная</a
-              >
+                >Главная</a>
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="about.html">О Седоне</a>
@@ -47,9 +47,9 @@
                   height="18"
                   viewBox="0 0 18 18"
                   fill="none"
-                  xmlns="http://www.w3.org/2000/svg"     
-                  role="img" 
-                  aria-label="Поиск"             
+                  xmlns="http://www.w3.org/2000/svg"
+                  role="img"
+                  aria-label="Поиск"
                 >
                   <path
                     d="m18 16.5-3.7-3.7c1-1.3 1.7-3 1.7-4.9 0-4.4-3.6-8-8-8S0 3.6 0 8c0 4.4 3.6 8 8 8 1.8 0 3.5-.6 4.9-1.7l3.7 3.7 1.4-1.5ZM8 14c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6Z"
@@ -69,8 +69,8 @@
                   viewBox="0 0 18 17"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  role="img" 
-                  aria-label="Избранное" 
+                  role="img"
+                  aria-label="Избранное"
                 >
                   <path
                     d="M8.9 17a.9.9 0 0 1-.8-.4c-5.4-6.1-6.7-7.5-7-7.9A5.4 5.4 0 0 1 5.5 0C6.8 0 8 .5 9 1.3a5.46 5.46 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z"
@@ -82,54 +82,57 @@
               <!-- Поповер-Избранное -->
               <div class="popover popover-favorite popover-close">
                 <div class="popover-content">
-                  <h2 class="visually-hidden popover-title">
-                    Отели в избранном
-                  </h2>                
+                  <p class="visually-hidden popover-title">Отели в избранном</p>
                   <div class="favorite-hotels-preview">
                     <div class="hotel-card-preview">
                       <a class="hotel-card-link-preview" href="hotel.html">
-                      <img
-                        class="hotel-card-image-preview"
-                        src="img/catalog/hotels/motel_Desert_Quail_Inn.jpg"
-                        width="48"
-                        height="48"
-                        alt="Мотель Desert Quail Inn на фоне окружающего ландшафта"                        
-                      />                     
-                        <h3 class="hotel-card-title-preview">Desert Quail Inn</h3>
-                        <p class="hotel-card-accommodation-type-preview">Мотель</p>
-                      </a>  
-                      <div class="popover-button-delete">                       
+                        <img
+                          class="hotel-card-image-preview"
+                          src="img/catalog/hotels/motel_Desert_Quail_Inn.jpg"
+                          width="48"
+                          height="48"
+                          alt="Мотель Desert Quail Inn на фоне окружающего ландшафта"
+                        />
+                        <p class="hotel-card-title-preview">Desert Quail Inn</p>
+                        <p class="hotel-card-accommodation-type-preview">
+                          Мотель
+                        </p>
+                      </a>
+                      <div class="popover-button-delete">
                         <a class="button-delete" href="#">
                           <span class="visually-hidden"> Удалить </span>
                         </a>
                       </div>
                     </div>
 
-                    <div class="hotel-card-preview">                      
+                    <div class="hotel-card-preview">
                       <a class="hotel-card-link-preview" href="hotel.html">
                         <img
-                        class="hotel-card-image-preview"
-                        src="img/catalog/hotels/apartaments_Villas_at_Poco_Diablo.jpg"
-                        width="48"
-                        height="48"
-                        alt="Горы вблизи апартаментов Villas at Poco Diablo"                        
+                          class="hotel-card-image-preview"
+                          src="img/catalog/hotels/apartaments_Villas_at_Poco_Diablo.jpg"
+                          width="48"
+                          height="48"
+                          alt="Горы вблизи апартаментов Villas at Poco Diablo"
                         />
-                        <h3 class="hotel-card-title-preview">
+                        <p class="hotel-card-title-preview">
                           Villas at Poco Diablo
-                        </h3>
+                        </p>
                         <p class="hotel-card-accommodation-type-preview">
                           Апартаменты
                         </p>
-                      </a>   
-                      <div class="popover-button-delete">                 
+                      </a>
+                      <div class="popover-button-delete">
                         <a class="button button-delete" href="#">
                           <span class="visually-hidden"> Удалить </span>
                         </a>
                       </div>
                     </div>
-                  </div>  
+                  </div>
                   <div class="favorite-all">
-                    <button class="button favorite-all-button button-brown" type="button">
+                    <button
+                      class="button favorite-all-button button-brown"
+                      type="button"
+                    >
                       Все избранные
                     </button>
                   </div>
@@ -137,7 +140,9 @@
               </div>
             </li>
             <li class="navigation-item navigation-item-button">
-              <a class="button button-find-navigation button-brown" href="#">Хочу сюда!</a>
+              <a class="button button-find-navigation button-brown" href="#"
+                >Хочу сюда!</a
+              >
             </li>
           </ul>
         </nav>
@@ -183,19 +188,18 @@
               <img
                 class="advantage-picture"
                 src="img/index/advantages/advantage_real_town.jpg"
-                width="800"
-                height="384"
                 alt="Дома города Седона"
               />
             </div>
             <!-- Жилье/ Еда / Сувениры -->
             <ul class="advantages-list advantage-wrapper">
-              <li class="advantages-item advantage-icon advantage-grey">                          
+              <li class="advantages-item advantage-icon advantage-grey">
                 <h3 class="advantage-title advantage-icon-accommodation">
                   Жильё
                 </h3>
                 <p class="advantage-description">
-                  Рекомендуем пожить в&nbsp;настоящем мотеле, всё&nbsp;как&nbsp;в кино!
+                  Рекомендуем пожить в&nbsp;настоящем мотеле,
+                  всё&nbsp;как&nbsp;в кино!
                 </p>
               </li>
               <li class="advantages-item advantage-icon">
@@ -210,7 +214,8 @@
                   Сувениры
                 </h3>
                 <p class="advantage-description">
-                  Не только китайского, но&nbsp;и&nbsp;настоящего местного производства!
+                  Не только китайского, но&nbsp;и&nbsp;настоящего местного
+                  производства!
                 </p>
               </li>
             </ul>
@@ -220,8 +225,6 @@
             <img
               class="advantage-picture"
               src="img/index/advantages/advantage_devil_bridge.jpg"
-              width="800"
-              height="384"
               alt="Мост дьявола города Седона"
             />
             <div class="advantage-blue advantages-item">
@@ -270,10 +273,12 @@
       <section class="find-hotel">
         <h2 class="find-hotel-title">Заинтересовались?</h2>
         <p class="find-hotel-description">
-          Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие
-          предложения гостиниц в Седоне
+          Укажите предполагаемые даты поездки,<br />
+          и мы покажем вам лучшие предложения гостиниц в Седоне
         </p>
-        <a href="#" class="button-find button button-brown">Поиск гостиницы в Седоне</a>
+        <a href="#" class="button-find button button-brown"
+          >Поиск гостиницы в Седоне</a
+        >
       </section>
       <!-- Подписка -->
       <section class="subscribe subscribe-index">
@@ -285,13 +290,15 @@
           <label for="subscribe-email" class="visually-hidden"
             >Введите e-mail</label
           >
+          <!-- Чтобы стилизовать input для поведения при ошибке ввода необходимо добавить ему класс "subscribe-email-invalid" -->
           <input
             class="subscribe-email"
             id="subscribe-email"
             type="email"
             name="subscribe-email"
-            placeholder="Ваш e-mail"            
-          />
+            placeholder="Ваш e-mail"
+            required=""
+          />          
           <button
             class="subscribe-button button button-blue"
             type="submit"
@@ -321,8 +328,8 @@
                   viewBox="0 0 18 15"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  role="img" 
-                  aria-label="Твиттер" 
+                  role="img"
+                  aria-label="Твиттер"
                 >
                   <path
                     d="M11.6.2c1.8-.5 3.2.3 3.8 1.2.7-.2 1.4-.5 2.1-.7 0 .9-.6 1.5-.9 1.8.7.1 1.4-.6 1.4-.6-.2 1-1.1 1.8-1.7 2C16.1 10.7 13 15.1 5.7 15h-.5c-.4 0-4.4-.5-5.2-1.9 2.4.2 4.1-.4 5-1.2-1-.3-2.9-.4-3.2-2.9.4.1.6.2 1.3.1C1.8 8.3.4 7.5.5 5.3c.3.3 1.1.5 1.4.5C1.1 5.6-.2 2.5.9.9c1.9 1.9 4 3.6 7.6 3.8C8.7 2.3 9.7.8 11.6.2Z"
@@ -345,8 +352,8 @@
                   viewBox="0 0 10 18"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  role="img" 
-                  aria-label="Фэйсбук" 
+                  role="img"
+                  aria-label="Фэйсбук"
                 >
                   <path
                     d="M7 0C4.8 0 3 1.8 3 4v2H0v4h3v8h4v-8h3V6H7V4h3V0H7Z"
@@ -369,7 +376,7 @@
                   viewBox="0 0 20 16"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  role="img" 
+                  role="img"
                   aria-label="Ютуб"
                 >
                   <path
@@ -394,7 +401,7 @@
                 viewBox="0 0 115 33"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                role="img" 
+                role="img"
                 aria-label="HTML Academy"
               >
                 <path
@@ -414,60 +421,108 @@
         </button>
         <section class="modal-content">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-          <form class="booking-form" action="https://echo.htmlacademy.ru/" method="post">
+          <form
+            class="booking-form"
+            action="https://echo.htmlacademy.ru/"
+            method="post"
+          >
             <div class="field-group booking-check">
-              <label for="booking-check-in">Дата заезда:</label>              
-              <input class="booking-input booking-check-input" type="text" id="booking-check-in" name="booking-check-in" placeholder="Укажите дату">
-              <span class="notice notice-invalid notice-close">Мы не можем отправить вас в прошлое.</span>
+              <label for="booking-check-in">Дата заезда:</label>
+              <input
+                class="booking-input booking-check-input"
+                type="text"
+                id="booking-check-in"
+                name="booking-check-in"
+                placeholder="Укажите дату"
+              />
+              <!-- Для отображения сообщений необходимо добавить класс "notice-open" у span ниже. Так же реализован вавод сообщения по booking-check-input:invalid -->
+              <span class="notice notice-invalid"
+                >Мы не можем отправить вас в прошлое.</span
+              >
               <button class="modal-calendar-button modal-button">
                 <span class="visually-hidden">Календарь</span>
               </button>
             </div>
             <div class="field-group booking-check booking-check-out">
               <label for="booking-check-out">Дата выезда:</label>
-              <input class="booking-input booking-check-input" type="text" id="booking-check-out" name="booking-check-out" placeholder="Укажите дату">
-              <span class="notice notice-valid notice-close">На эти даты есть свободные номера. Пока есть.</span>
+              <input
+                class="booking-input booking-check-input"
+                type="text"
+                id="booking-check-out"
+                name="booking-check-out"
+                placeholder="Укажите дату"
+              />
+              <!-- Для отображения сообщений необходимо добавить класс "notice-open" у span ниже -->
+              <span class="notice notice-valid"
+                >На эти даты есть свободные номера. Пока есть.</span
+              >
               <button class="modal-calendar-button modal-button">
                 <span class="visually-hidden">Календарь</span>
               </button>
             </div>
             <div class="booking-guests">
-              <div class="field-group booking-adults">              
-                <label for="booking-adults">Взрослые:</label> 
+              <div class="field-group booking-adults">
+                <label for="booking-adults">Взрослые:</label>
                 <button class="modal-minus-button modal-button">
-                  <span class="visually-hidden">Уменьшить количество взрослых</span>
+                  <span class="visually-hidden"
+                    >Уменьшить количество взрослых</span
+                  >
                 </button>
-                <input class="booking-input booking-guests-input" type="number" id="booking-adults" name="booking-adults" value="2">
+                <input
+                  class="booking-input booking-guests-input"
+                  type="number"
+                  id="booking-adults"
+                  name="booking-adults"
+                  value="2"
+                />
                 <button class="modal-plus-button modal-button">
-                  <span class="visually-hidden">Увеличить количество взрослых</span>
+                  <span class="visually-hidden"
+                    >Увеличить количество взрослых</span
+                  >
                 </button>
               </div>
               <div class="field-group booking-children">
                 <label for="booking-children">Дети:</label>
-                <div class="info-tooltip-button">                                     
+                <div class="info-tooltip-button">
                   <button class="booking-info" type="button">
-                      <span class="visually-hidden">Посмотреть дополнительную информацию</span> 
+                    <span class="visually-hidden"
+                      >Посмотреть дополнительную информацию</span
+                    >
                   </button>
-                  <div class="tooltip tooltip-info tooltip-close">
-                      <div class="tooltip-content">
-                        <h3 class="visually-hidden">Информационная подсказка</h3>
-                        <p>
-                        Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
-                        </p> 
-                      </div>
+                  <div class="tooltip tooltip-info">
+                    <div class="tooltip-content">
+                      <h3 class="visually-hidden">Информационная подсказка</h3>
+                      <p>
+                        Укажите количество детей, которые будут с вами, возраст
+                        которых от 6 до 18 лет. Дети до 6 лет размещаются
+                        бесплатно.
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <button class="modal-minus-button modal-button">
-                    <span class="visually-hidden">Уменьшить количество детей</span>
+                  <span class="visually-hidden"
+                    >Уменьшить количество детей</span
+                  >
                 </button>
-                <input class="booking-input booking-guests-input" type="number" id="booking-children" name="booking-children" value="1">
+                <input
+                  class="booking-input booking-guests-input"
+                  type="number"
+                  id="booking-children"
+                  name="booking-children"
+                  value="1"
+                />
                 <button class="modal-plus-button modal-button">
-                    <span class="visually-hidden">Увеличить количество взрослых</span>
+                  <span class="visually-hidden"
+                    >Увеличить количество взрослых</span
+                  >
                 </button>
               </div>
             </div>
             <div class="field-group booking-button">
-              <button class="button button-blue booking-search" type="submit">Найти</button>
+              <button class="button button-blue booking-search" type="submit">
+                Найти
+              </button>
             </div>
           </form>
         </section>
@@ -475,9 +530,3 @@
     </div>
   </body>
 </html>
-
-
-
-
-
-

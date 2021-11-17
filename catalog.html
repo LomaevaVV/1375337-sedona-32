@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="favicon.ico"/><!-- 32×32 -->   
   </head>
 
   <body>
@@ -82,9 +83,9 @@
               <!-- Поповер-Избранное -->
               <div class="popover popover-favorite popover-close">
                 <div class="popover-content">
-                  <h2 class="visually-hidden popover-title">
+                  <p class="visually-hidden popover-title">
                     Отели в избранном
-                  </h2>
+                  </p>
                   <div class="favorite-hotels-preview">
                     <div class="hotel-card-preview">
                       <a class="hotel-card-link-preview" href="hotel.html">
@@ -95,9 +96,9 @@
                           height="48"
                           alt="Мотель Desert Quail Inn на фоне окружающего ландшафта"
                         />
-                        <h3 class="hotel-card-title-preview">
+                        <p class="hotel-card-title-preview">
                           Desert Quail Inn
-                        </h3>
+                        </p>
                         <p class="hotel-card-accommodation-type-preview">
                           Мотель
                         </p>
@@ -118,9 +119,9 @@
                           height="48"
                           alt="Горы вблизи апартаментов Villas at Poco Diablo"
                         />
-                        <h3 class="hotel-card-title-preview">
+                        <p class="hotel-card-title-preview">
                           Villas at Poco Diablo
-                        </h3>
+                        </p>
                         <p class="hotel-card-accommodation-type-preview">
                           Апартаменты
                         </p>
@@ -578,12 +579,14 @@
           <label for="subscribe-email" class="visually-hidden"
             >Введите e-mail</label
           >
+          <!-- Чтобы стилизовать input для поведения при ошибке ввода необходимо добавить ему класс "subscribe-email-invalid" -->
           <input
             class="subscribe-email subscribe-email-catalog"
             id="subscribe-email"
             type="email"
             name="subscribe-email"
             placeholder="Ваш e-mail"
+            required=""
           />
           <button
             class="subscribe-button button button-blue"
